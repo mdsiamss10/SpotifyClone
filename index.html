@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+      href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Spotify - Siam</title>
+  </head>
+  <body>
+    <!-- Navbar Starts here -->
+    <nav>
+      <div class="nav_left_side" style="display: flex; align-items: center">
+        <div class="logo">
+          <img
+            draggable="false"
+            src="./images/spotifyLogo.png"
+            alt="SpotifyLogo"
+          />
+        </div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="nav_right_side" style="display: flex; align-items: center">
+        <button class="premium_plans_button">Premium Plans</button>
+        <div class="user_profile_details_button">
+          <div class="user_profile_logo_icon">
+            <i class="fa-regular fa-user"></i>
+          </div>
+          <div class="user_profile_name">
+            <span>Ohiduzzaman...</span>
+          </div>
+          <div class="user_profile_right_side_down_icon">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Ends Here -->
+
+    <!-- Main Content Starts  -->
+    <div class="container">
+      <div class="song_cards_section"></div>
+    </div>
+    <!-- Main Content Ends  -->
+
+    <!-- Current Music Player Footer Starts -->
+    <div class="music_player_footer">
+      <div class="left_side_music_details">
+        <div class="footer_album_cover_img_text">
+          <img src="/images/cover.jpg" alt="AlbumCover" draggable="false" />
+          <div class="footer_music_details">
+            <div class="music_player_wave_gif">
+              <img
+                src="https://gifimage.net/wp-content/uploads/2017/06/music-gif-2.gif"
+                draggable="false"
+                class="gif_image"
+                style="opacity: 0; transition: opacity 0.5s ease-in"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center_music_player">
+        <div class="music_progress_bar">
+          <input
+            type="range"
+            class="progressBar"
+            style="width: 15em; margin-bottom: 10px; cursor: pointer"
+            value="0"
+          />
+        </div>
+        <div class="audio_controls_button">
+          <i class="fa-solid fa-backward"></i>
+          <i class="fa-solid fa-play masterPlay"></i>
+          <i class="fa-solid fa-forward"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Current Music Player Footer Ends -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+      tippy(".user_profile_details_button", {
+        content: "Ohiduzzaman Siam",
+      });
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>
